@@ -12,6 +12,7 @@ function initLoader(el, state, options) {
     const propsData = {
       name: el.getAttribute('loading-name') || undefined,
       color: el.getAttribute('loading-color') || undefined,
+      size: el.getAttribute('loading-size') || undefined,
       ...options,
     }
     if (!el.__loading || !el.loading.mask) {
@@ -30,6 +31,7 @@ function updateLoader(el, state, options) {
     const propsData = {
       name: el.getAttribute('loading-name') || undefined,
       color: el.getAttribute('loading-color') || undefined,
+      size: el.getAttribute('loading-size') || undefined,
       ...options,
     }
     Object.assign(el.__loading.mask, propsData)

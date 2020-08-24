@@ -52,5 +52,10 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    extend(config, { isClient }) {
+      console.log(config)
+      config.resolve.modules.push('node_modules/v-spinner')
+    },
+  },
 }
